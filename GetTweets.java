@@ -77,13 +77,13 @@ public final class GetTweets{
 	 * @throws IOException
 	 */
 	public static void main(String[] args) throws TwitterException, IOException {
-    	GetTweets gt = new GetTweets();
-    	gt.configurateBuilder();
-    	gt.initializeTwitter();
-        gt.initializeUser(args[0]);
-        gt.initializeTweets();
-        gt.output(args[1]);
-    }
+    		GetTweets gt = new GetTweets();
+    		gt.configurateBuilder();
+    		gt.initializeTwitter();
+       		gt.initializeUser(args[0]);
+        	gt.initializeTweets();
+        	gt.output(args[1]);
+    	}
 	
 	public Paging getPage() {
 		return page;
