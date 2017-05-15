@@ -40,10 +40,10 @@ public final class GetTweets{
 	}
 	
 	void initializeUser(String userAccount) throws TwitterException{
-		 this.setUser(this.getTwitter().showUser(userAccount));
-         this.setNumTweets(this.getUser().getStatusesCount());
-         this.setNumTweets(this.getUser().getStatusesCount());
-         this.setStringUser(userAccount);
+		this.setUser(this.getTwitter().showUser(userAccount));
+        	this.setNumTweets(this.getUser().getStatusesCount());
+        	this.setNumTweets(this.getUser().getStatusesCount());
+        	this.setStringUser(userAccount);
 	}
 	
 	void initializeTweets() throws TwitterException{
@@ -58,21 +58,21 @@ public final class GetTweets{
 		int repetitions = this.getNumTweets() / PAGE_SIZE;
 		
 		FileWriter fw = new FileWriter(file);
-        PrintWriter pw = new PrintWriter(fw);
+        	PrintWriter pw = new PrintWriter(fw);
         
-        for(int i = 0; i < repetitions; i++){
-        	for (Status status : this.getMyStatues())
+        	for(int i = 0; i < repetitions; i++){
+        		for(Status status : this.getMyStatues())
         		pw.println(status.getText());
    
-        	updatePage(i);
-        	initializeTweets();
-        }
-        pw.close();
+        		updatePage(i);
+        		initializeTweets();
+        	}
+       		pw.close();
 	}
 
 	/**
 	 * @param args --> args[0]: Twitter Account.
-	 * 			   --> args[1]: Output textfile name.
+	 * 	       --> args[1]: Output textfile name.
 	 * @throws TwitterException
 	 * @throws IOException
 	 */
