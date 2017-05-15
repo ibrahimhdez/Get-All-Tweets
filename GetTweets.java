@@ -78,6 +78,7 @@ public final class GetTweets{
 	 */
 	public static void main(String[] args) throws TwitterException, IOException {
     		GetTweets gt = new GetTweets();
+		
     		gt.configurateBuilder();
     		gt.initializeTwitter();
        		gt.initializeUser(args[0]);
