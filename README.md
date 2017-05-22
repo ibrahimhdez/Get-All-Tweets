@@ -9,3 +9,4 @@ Requirements:
 Instrucctions:
 * To Compile: javac -cp ".:/path/to/jar/example.jar" GetTweets.java
 * To execute: java -cp ".:/path/to/jar/example.jar" GetTweets \<TwitterAccount> \<OutputFile>
+* Where \<TwitterAccount> is the username of the account you want to download the tweets and \<OutputFile> is the name of the file where the tweets will be written.
